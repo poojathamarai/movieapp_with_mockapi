@@ -1,0 +1,73 @@
+
+.App{
+  font-family: "Roboto";
+}
+.user-name{
+  font-size: 32px;
+}
+.user-pic{
+  height: 12rem;
+  width: 12rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.movie-poster{
+  height: 640px;
+  width: 420px;
+  object-fit: cover; 
+} 
+.movie-name{
+  font-size: 24px;
+  margin: 0;
+}
+.movie-specs{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.movie-container{
+  width: 420px;
+  height: min-content;
+
+}
+.movie-list{
+  margin-top: 1rem;
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(420px,1fr));
+  gap:1rem;
+  justify-items:center;
+}
+.counter-container{
+  display: flex;
+  gap: 10px;
+  
+}
+.add-color{
+  margin-top: 1rem;
+}
+.add-movie-form{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap:0.5rem;
+  margin: 0.5rem;
+}
+.router-container{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.not-found-container{
+  text-align: center;
+  font-size: 3rem;
+}
+.not-found-container>h2{
+  margin: 0;
+}
+.not-found-image{
+  width: 100%;
+  max-width: 45rem;
+}
+.movie-detail-container{
+  max-width: 40rem;
+}
