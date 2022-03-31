@@ -11,7 +11,7 @@ export function EditMovie() {
         .then((mv)=>setMovie(mv))
    };
     useEffect(getMovie,[]);
-    return movie?<UpdateMovie movie={movie}:/>:" ";
+    return movie?<UpdateMovie movie={movie}/>:" ";
 }
 function UpdateMovie({movie}){
   const [name, setName] = useState(movie.name);
