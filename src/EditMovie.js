@@ -8,7 +8,7 @@ export function EditMovie() {
    const getMovie=()=>{
     fetch(`https://61c412d4f1af4a0017d9927f.mockapi.io/movies/${id}`,{method:"GET"}).then((data)=>data.json()).then((mv)=>setMovie(mv))}
     useEffect(getMovie,[]);
-    return<UpdateMovie movie={movie}/>
+    return movie?<UpdateMovie movie={movie}:""/>
 }
 function UpdateMovie({movie}){
   const [name, setName] = useState(movie.name);
