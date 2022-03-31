@@ -18,7 +18,7 @@ import { EditMovie } from './EditMovie';
 
 
 function App() {
-  const histroy=useHistory();
+  const history=useHistory();
   const [mode,setMode]=useState("dark")
   const theme = createTheme({
     palette: {
