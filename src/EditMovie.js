@@ -4,7 +4,7 @@ import { Button } from '@mui/material';
 import TextField from '@mui/material/TextField';
 export function EditMovie() {
     const {id} = useParams();
-   const [movie,setMovie]=useState([]);
+   const [movie,setMovie]=useState(null);
    const getMovie=()=>{
     fetch(`https://61c412d4f1af4a0017d9927f.mockapi.io/movies/${id}`,{method:"GET"})
         .then((data)=>data.json())
