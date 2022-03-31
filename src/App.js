@@ -5,7 +5,7 @@ import { AddMovie } from './AddMovie';
 import { Home } from './Home';
 import { AddColor } from './AddColor';
 import {Switch,Route,Redirect, useHistory} from "react-router-dom";
-import { useState,useEffect } from 'react';
+import { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import { Button } from '@mui/material';
