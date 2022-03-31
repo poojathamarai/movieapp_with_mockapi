@@ -8,13 +8,10 @@ export function MovieList() {
     const history=useHistory();
     const [movies,setMovieList]=useState([])
     const getMovies=()=>{
-        fetch(`https://61c412d4f1af4a0017d9927f.mockapi.io/movies/`,{method:"GET"}).
-        then((data)=>data.json()).then((mvs)=>setMovieList(mvs))
+        fetch(`https://61c412d4f1af4a0017d9927f.mockapi.io/movies/`,{method:"GET"}).then((data)=>data.json()).then((mvs)=>setMovieList(mvs))
     }
     const deleteMovie=(id)=>{
-        fetch(`https://61c412d4f1af4a0017d9927f.mockapi.io/movies/${id}`,{method:"DELETE"}).
-        then((data)=>data.json())
-        .then(()=>getMovies());
+        fetch(`https://61c412d4f1af4a0017d9927f.mockapi.io/movies/${id}`,{method:"DELETE"}).then((data)=>data.json()).then(()=>getMovies());
     }
     useEffect(getMovies,[]);
   return (
