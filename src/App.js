@@ -24,12 +24,6 @@ function App() {
       mode: mode,
     },
   });
-  
-  const [movieList,setMovieList]=useState([]);
-  const history=useHistory();
-  useEffect(()=>{
-    fetch("https://61c412d4f1af4a0017d9927f.mockapi.io/movies").then((data)=>data.json()).then((mvs)=>setMovieList(mvs))
-  },[]) 
   return (   
     <ThemeProvider theme={theme}>
       <Paper sx={{minHeight:"100vh",borderRadius:"0"}} elevation={24}  >
