@@ -6,9 +6,13 @@ export function EditMovie() {
     const {id} = useParams();
    const [movie,setMovie]=useState([]);
    const getMovie=()=>{
-    fetch(`https://61c412d4f1af4a0017d9927f.mockapi.io/movies/${id}`,{method:"GET"}).then((data)=>data.json()).then((mv)=>setMovie(mv))}
+    fetch(`https://61c412d4f1af4a0017d9927f.mockapi.io/movies/${id}`,{method:"GET"})
+        .then((data)=>data.json())
+        .then((mv)=>setMovie(mv))}
+        .catch((err)=>console.log(err));
+};
     useEffect(getMovie,[]);
-    return movie?<UpdateMovie movie={movie}:""/>
+    return movie?<UpdateMovie movie={movie}:/>:" ";
 }
 function UpdateMovie({movie}){
   const [name, setName] = useState(movie.name);
