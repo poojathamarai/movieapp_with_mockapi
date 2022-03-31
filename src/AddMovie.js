@@ -21,8 +21,7 @@ export function AddMovie() {
     {method:"POST",
     body:JSON.stringify(newMovie),
     headers:{"Content-Type": "application/json"}
-  }).
-    then((data)=>data.json()).then(()=>history.push("/movie"))
+  }).then((data)=>data.json()).then(()=>history.push("/movie"))
 
   }
   return (<div className="add-movie-form">
